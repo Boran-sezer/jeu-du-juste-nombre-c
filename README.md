@@ -1,14 +1,4 @@
-# jeu-du-juste-nombre
-
-Petit jeu de devinette de nombre coder en langage c.
-
-# utilisation 
- 
-  - Aller sur le repertoire github 
-  - Ouvrir le code du jeux
-  - Telecharger le puis tester le
-
-# Jeu en C – Compilation et exécution rapide
+# Jeu Du Juste Nombre – Compilation et exécution rapide
 
 Ce projet contient un programme écrit en **langage C** ainsi qu’un script permettant de le compiler et de l’exécuter automatiquement sous **Windows**.
 
