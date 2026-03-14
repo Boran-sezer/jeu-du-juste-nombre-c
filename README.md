@@ -1,32 +1,29 @@
 # 🎯 Jeu du Nombre Mystère (C)
 
-Petit jeu en **langage C** dans lequel le joueur doit deviner un **nombre aléatoire** généré par l’ordinateur.
+Petit jeu en **langage C** où le joueur doit deviner un **nombre aléatoire** généré par l’ordinateur.
 
-Le programme donne des indices :
+Le programme donne des indices pour aider le joueur :
 
-* ⬆️ **"C'est plus !"** → le nombre mystère est plus grand
-* ⬇️ **"C'est moins !"** → le nombre mystère est plus petit
+* **"C'est plus !"** → le nombre mystère est plus grand
+* **"C'est moins !"** → le nombre mystère est plus petit
 
-Le jeu continue jusqu’à ce que le joueur trouve le bon nombre.
+Le jeu continue jusqu’à ce que le bon nombre soit trouvé. Une fois la partie terminée, le joueur peut choisir de **rejouer**.
 
 ---
 
 # 🧠 Principe du jeu
 
-1. 💻 L’ordinateur génère un nombre aléatoire entre **1 et 100**
-2. 🎮 Le joueur propose un nombre
-3. 🔍 Le programme indique si le nombre mystère est :
-
-   * plus grand
-   * plus petit
-4. 🔁 Le joueur recommence jusqu’à trouver la bonne réponse
-5. 🎉 Une fois trouvé, le joueur peut **rejouer une nouvelle partie**
+1. L’ordinateur génère un nombre aléatoire entre **1 et 100**
+2. Le joueur propose un nombre
+3. Le programme indique si le nombre mystère est plus grand ou plus petit
+4. Le joueur recommence jusqu’à trouver la bonne réponse
+5. Une fois trouvé, le joueur peut lancer une nouvelle partie
 
 ---
 
 # 📂 Fichiers du projet
 
-```
+```text
 projet/
 │
 ├── jeux.c
@@ -34,22 +31,22 @@ projet/
 └── README.md
 ```
 
-### 📄 `jeux.c`
+### `jeux.c`
 
-Contient **le code du jeu**.
+Ce fichier contient **le code source du jeu**.
 
-Fonctionnalités principales :
+Le programme utilise plusieurs éléments du langage C :
 
-* 🎲 génération d’un nombre aléatoire (`rand`)
-* 🔁 boucle de jeu
-* 🔄 système pour **rejouer une partie**
-* ⌨️ interaction avec l’utilisateur via le terminal
+* génération d’un nombre aléatoire
+* boucle de jeu
+* interaction avec l’utilisateur dans le terminal
+* possibilité de recommencer une partie
 
 ---
 
-### ⚙️ `run.bat`
+### `run.bat`
 
-Script Windows permettant de **compiler et exécuter le jeu automatiquement**.
+Script Windows permettant de **compiler et exécuter automatiquement le programme**.
 
 Contenu du script :
 
@@ -62,25 +59,25 @@ if %errorlevel%==0 (
 
 Ce script :
 
-1. 🛠️ compile le fichier `.c`
-2. 📦 crée le fichier `.exe`
-3. ▶️ lance le programme si la compilation fonctionne
+1. compile le fichier `.c`
+2. crée le fichier `.exe`
+3. lance le programme si la compilation réussit
 
 ---
 
 # ⚙️ Prérequis
 
-Installer un compilateur C :
+Installer un compilateur C sur Windows.
 
-* **GCC avec MinGW ou MinGW-w64**
+Par exemple **GCC avec MinGW ou MinGW-w64**.
 
-Tester dans le terminal :
+Pour vérifier que l’installation fonctionne :
 
 ```bash
 gcc --version
 ```
 
-Si une version apparaît, le compilateur est correctement installé.
+Si une version apparaît dans le terminal, le compilateur est correctement installé.
 
 ---
 
@@ -96,9 +93,9 @@ run jeux
 
 Le script va automatiquement :
 
-1. 🛠️ compiler `jeux.c`
-2. 📦 créer `jeux.exe`
-3. 🎮 lancer le jeu
+1. compiler `jeux.c`
+2. créer `jeux.exe`
+3. lancer le jeu
 
 ---
 
@@ -122,54 +119,36 @@ Voulez-vous rejouer ? (1 pour OUI, 0 pour NON) :
 
 # 🔧 Fonctionnement du code
 
-Le programme utilise plusieurs concepts fondamentaux du C.
-
-### 🎲 Génération aléatoire
+Le programme initialise le générateur de nombres aléatoires avec :
 
 ```c
 srand(time(NULL));
 ```
 
-Initialise le générateur de nombres aléatoires.
-
-Puis :
+Puis il génère un nombre entre **1 et 100** :
 
 ```c
 nombreMystere = (rand() % (MAX - MIN + 1)) + MIN;
 ```
 
-Génère un nombre entre **1 et 100**.
+Une boucle `do...while` gère les tentatives du joueur jusqu’à ce que le bon nombre soit trouvé.
 
----
-
-### 🔁 Boucle de jeu
-
-Une boucle `do...while` permet :
-
-* ⌨️ de demander un nombre au joueur
-* 🔍 de vérifier s’il est correct
-* 💡 de donner un indice
-
----
-
-### 🔄 Rejouer une partie
-
-Une seconde boucle `do...while` permet de **relancer une nouvelle partie** si le joueur entre `1`.
+Une seconde boucle permet de **rejouer une nouvelle partie** si le joueur choisit de continuer.
 
 ---
 
 # 💡 Améliorations possibles
 
-Quelques idées pour améliorer le jeu :
+Quelques idées pour améliorer ce projet :
 
-* 📊 ajouter un **compteur de tentatives**
-* 🔥 ajouter un **mode difficile (1-1000)**
-* ⏳ limiter le **nombre d’essais**
-* 🎨 ajouter des **couleurs dans le terminal**
-* 🖥️ créer une **interface graphique**
+* ajouter un **compteur de tentatives**
+* ajouter un **mode difficile (1 à 1000)**
+* limiter le **nombre d’essais**
+* ajouter des **couleurs dans le terminal**
+* créer une **interface graphique**
 
 ---
 
 # 📜 Licence
 
-📚 Projet libre pour l’apprentissage du langage **C**.
+Projet libre pour l’apprentissage du langage **C**.
