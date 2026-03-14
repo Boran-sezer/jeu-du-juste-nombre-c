@@ -26,7 +26,7 @@ Le jeu continue jusqu’à ce que le bon nombre soit trouvé. Une fois la partie
 ```text
 projet/
 │
-├── jeux.c
+├── jeux_du_juste_nombre.c
 ├── run.bat
 └── README.md
 ```
@@ -88,13 +88,13 @@ Ouvrir un **terminal** dans le dossier du projet.
 Puis exécuter :
 
 ```bash
-run jeux
+run jeux_du_juste_nombre
 ```
 
 Le script va automatiquement :
 
-1. compiler `jeux.c`
-2. créer `jeux.exe`
+1. compiler `jeux_du_juste_nombre.c`
+2. créer `jeux_du_juste_nombre.exe`
 3. lancer le jeu
 
 ---
