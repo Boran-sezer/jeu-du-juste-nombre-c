@@ -1,4 +1,4 @@
-**# Jeu Du Juste Nombre – Compilation et exécution rapide
+# Jeu Du Juste Nombre – Compilation et exécution rapide
 
 Ce projet contient un programme écrit en **langage C** ainsi qu’un script permettant de le compiler et de l’exécuter automatiquement sous **Windows**.
 
