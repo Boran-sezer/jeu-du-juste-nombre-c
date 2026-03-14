@@ -1,4 +1,4 @@
-# 🎯 Jeu du Nombre Mystère (C)
+# 🎯 Jeu du Juste Nombre (C)
 
 Petit jeu en **langage C** où le joueur doit deviner un **nombre aléatoire** généré par l’ordinateur.
 
